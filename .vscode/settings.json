@@ -1,0 +1,16 @@
+{
+    "debug.allowBreakpointsEverywhere": true,
+    "files.autoGuessEncoding": true,
+    "phpserver.phpPath": "C:\\wamp64\\bin\\php\\php7.2.18",
+    "php.validate.executablePath": "C:\\wamp64\\bin\\php\\php7.2.18\\php.exe",
+    "php.executablePath": "C:\\wamp64\\bin\\php\\php7.2.18\\php.exe",
+    "cSpell.ignoreWords": [
+        "Ecommerce",
+        "bday",
+        "firstname",
+        "lastname"
+    ],
+    "cSpell.words": [
+        "foozaweb"
+    ]
+}

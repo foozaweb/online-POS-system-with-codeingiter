@@ -113,7 +113,7 @@ class AuthModel extends CI_Model
 
 				<body>  
 					<div class="container"> 
-						<a class="nav-link nav-index" href="https://chbluxury.com/">' . $logo . '</a>
+						<a class="nav-link nav-index" href="">' . $logo . '</a>
 					</div>   
 					<hr>
 					<hr><br>
@@ -123,7 +123,7 @@ class AuthModel extends CI_Model
 							<div class="section-intro mx-auto text-center mb-5 text-secondary">' . $msg . '</div> 
 							<footer class="footer text-light text-center"> 
 							' . $signout . '
-								<small class="copyright"> Copyright &copy;' . date('Y') . ' CHBLUXURY.COM<br> </small>
+								<small class="copyright"> Copyright &copy;' . date('Y') . '<br> </small>
 							</footer> 
 						</div> 
 					</section>  
@@ -135,8 +135,8 @@ class AuthModel extends CI_Model
 			'smtp_host' => "ssl://smtp.googlemail.com",
 			'smtp_port' => 465,
 			'smtp_timeout' => 20,
-			'smtp_user' => "chbluxuryikeja@gmail.com",
-			'smtp_pass' => "CHBLUXURYIKEJA123456789",
+			'smtp_user' => "",
+			'smtp_pass' => "",
 			'mailtype' => "html",
 			'starttls' => true,
 			'crlf' => "\r\n",
@@ -144,13 +144,13 @@ class AuthModel extends CI_Model
 		);
 		$this->load->library('email');
 		$this->email->initialize($config);
-		$this->email->from("CHB LUXURY");
+		$this->email->from("NO REPLY");
 		$this->email->to($email);
 		$this->email->subject($subject);
-		$this->email->message($mailToSend); 
+		$this->email->message($mailToSend);
 		$flag = $this->email->send();
-		if ($flag) { 
-			return $flag; 
+		if ($flag) {
+			return $flag;
 		} else {
 			return false;
 		}
@@ -185,7 +185,7 @@ class AuthModel extends CI_Model
 		}
 	}
 
-  
+
 
 	function access($loginId, $password)
 	{
@@ -290,7 +290,7 @@ class AuthModel extends CI_Model
 		return $this->db->update('chbadmin', array('emailStatus' => '1'));
 	}
 
-	 
+
 
 	function getLoginAccount()
 	{

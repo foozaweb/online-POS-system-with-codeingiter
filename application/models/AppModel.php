@@ -66,7 +66,7 @@ class AppModel extends CI_Model
 
 				<body>  
 					<div class="container"> 
-						<a class="nav-link nav-index" href="https://foozawebtech.com/">' . $logo . '</a>
+						<a class="nav-link nav-index" href="">' . $logo . '</a>
 					</div>   
 					<hr>
 					<hr><br>
@@ -78,7 +78,7 @@ class AppModel extends CI_Model
 					</section> 
 
 					<footer class="footer text-light text-center py-2"> 
-						<small class="copyright"> Copyright &copy;' . date('Y') . ' CHBLUXURY.COM<br> Powered by <a class="text-light text-link" href="https://foozawebtech.com/">FoozawebTech</a></small>
+						<small class="copyright"> Copyright &copy;' . date('Y') . '</small>
 					</footer> 
                 </body>
             	</html> ';
@@ -87,8 +87,8 @@ class AppModel extends CI_Model
 			'protocol' => $protocol,
 			'smtp_host' => 'ssl://smtp.googlemail.com',
 			'smtp_port' => 465,
-			'smtp_user' => 'chbluxuryikeja@gmail.com',
-			'smtp_pass' => 'CHBLUXURYIKEJA123456789',
+			'smtp_user' => '',
+			'smtp_pass' => '',
 			'mailtype' => 'html',
 			'starttls'  => true,
 			'newline'   => "\r\n",
@@ -256,10 +256,9 @@ class AppModel extends CI_Model
 		$cus = $res['customer'];
 		$total_paid = $res['total_paid'];
 
-		if(intval($total_paid + $payment_amount) >= intval($res['grandTotal'])){
+		if (intval($total_paid + $payment_amount) >= intval($res['grandTotal'])) {
 			$stats = '1';
-		}
-		else if(intval($total_paid + $payment_amount) < intval($res['grandTotal'])){
+		} else if (intval($total_paid + $payment_amount) < intval($res['grandTotal'])) {
 			$stats = '0';
 		}
 		$installment_data = array(
@@ -271,9 +270,9 @@ class AppModel extends CI_Model
 		);
 		$this->db->insert('pos_payments', $installment_data);
 
-		$this->thereIsAnActivity('made payment for an invoice with Id: '.$invoiceId);
+		$this->thereIsAnActivity('made payment for an invoice with Id: ' . $invoiceId);
 		$this->db->where('invoice_no', $invoiceId);
-		return $this->db->update('pos_orders', array('total_paid' => $total_paid + $payment_amount, 'order_status'=>$stats));
+		return $this->db->update('pos_orders', array('total_paid' => $total_paid + $payment_amount, 'order_status' => $stats));
 	}
 
 
@@ -430,9 +429,10 @@ class AppModel extends CI_Model
 	}
 
 
-	function finishTransaction($invoice_no){
+	function finishTransaction($invoice_no)
+	{
 		$this->db->where('invoice_no', $invoice_no);
-		$this->db->update('pos_orders', array('order_status'=>'1'));
+		$this->db->update('pos_orders', array('order_status' => '1'));
 		return $this->thereIsAnActivity('finished a transaction with ID: ' . $invoice_no);
 	}
 }

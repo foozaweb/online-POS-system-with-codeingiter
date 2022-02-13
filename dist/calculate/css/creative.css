@@ -1,0 +1,240 @@
+#calculator a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+#calculator a,
+.btn {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#calculator .container {
+	width: 94%;
+}
+
+#calculator :focus {
+	outline: none;
+	box-shadow: 0px 0px 0px transparent;
+}
+
+#calculator .calculator {
+	background: #f0f0f0;
+	box-shadow: 2px 3px 6px #212121;
+}
+
+#calculator .displayBox {
+	background: #455a64;
+	padding: 0;
+	min-height: 220px;
+	overflow: hidden;
+}
+
+#calculator .displayText {
+	margin-top: 110px;
+	background: transparent;
+	border: none;
+	color: #fff;
+	font-size: 80px;
+	font-weight: 100;
+	padding-right: 20px;
+	padding-bottom: -10px;
+	float: right;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#calculator .operationSide {
+	background: #fff;
+	margin-top: -14px;
+	padding: 0;
+	padding-left: -20px;
+	padding-top: 10px;
+	border-left: 1px solid #e5e5e5;
+}
+
+#calculator .numberPad {
+	padding-top: 14px;
+}
+
+#calculator .btn-calc,
+.btn-calc:focus {
+	background: transparent;
+	color: #a2a2a2;
+	font-size: 25px;
+	width: 75px;
+	height: 75px;
+	font-weight: 100;
+	border-radius: 100px;
+	outline: none;
+	box-shadow: 0px 0px 0px transparent;
+	border: none;
+}
+
+#calculator .btn-calc:hover {
+	background: #fff;
+	color: #455a64;
+}
+
+#calculator .btn-operation {
+	background: transparent;
+	color: #999;
+	font-size: 25px;
+	/*width: 97px;*/
+	width: 100%;
+	height: 80.8px;
+	font-weight: 100;
+	border-radius: 0;
+	outline: none;
+	box-shadow: 0px 0px 0px transparent;
+}
+
+#calculator .btn-operation:focus {
+	background: #e8e8e8;
+	color: #444;
+	outline: 0;
+}
+
+#calculator .btn-operation:hover {
+	background: #e8e8e8;
+	color: #444;
+}
+
+#calculator .equals,
+.equals:focus {
+	background: #455a64;
+	color: #fff;
+}
+
+#calculator .equals:hover {
+	background: #455a64;
+	color: #fff;
+}
+
+#calculator .clear,
+.clear:focus {
+	background: #455a64 !important;
+	color: #fff;
+	font-size: 25px;
+	width: 75px;
+	height: 75px;
+	font-weight: 100;
+	border-radius: 100px;
+	outline: none;
+	box-shadow: 0px 0px 0px transparent;
+	border: transparent;
+}
+
+#calculator .clear:hover {
+	background: #455a64;
+	color: #fff;
+}
+
+#calculator .btn-question,
+.btn-question:focus {
+	z-index: 100;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: transparent;
+	border: 2px solid #fff;
+	padding-top: 6px;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 18px;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#calculator .btn-question:hover {
+	background: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+#calculator :focus {
+	outline: none !important;
+}
+
+::-moz-focus-inner {
+	border: 0 !important;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+	#calculator .calculator {
+		height: 590px;
+		box-shadow: 2px 3px 6px #888;
+	}
+	#calculator .displayBox {
+		height: 150px;
+	}
+	#calculator .displayText {
+		margin-top: 80px;
+		font-size: 50px;
+	}
+	#calculator .btn-calc,
+	.btn-calc:focus {
+		width: 70px;
+		height: 70px;
+		font-size: 18px;
+	}
+	#calculator .operationSide {
+		padding: 0;
+	}
+	#calculator .btn-operation,
+	.btn-operation:focus {
+		width: 60px;
+		height: 60px;
+		font-size: 18px;
+	}
+	#calculator .clear,
+	.clear:focus {
+		width: 70px;
+		height: 70px;
+		font-size: 18px;
+	}
+	#calculator .equals,
+	.equals:focus {
+		width: 62px;
+		height: 63px;
+		margin-top: 1px;
+	}
+	#calculator .modal-dialog {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	#calculator .container {
+		width: 85%;
+	}
+	#calculator .btn-calc,
+	.clear,
+	.btn-calc:focus,
+	.clear:focus {
+		width: 80px;
+		height: 80px;
+	}
+	#calculator .equals,
+	.equals:focus {
+		width: 100%;
+		height: 96px;
+	}
+}
+
+#calculator .hvr-radial-out:before {
+	background: #fff !important;
+	border-radius: 100%;
+	transition-duration: 0.5s;
+}
+
+#calculator .hvr-fade:before {
+	background: #fff !important;
+	transition-duration: 0.5s;
+}
